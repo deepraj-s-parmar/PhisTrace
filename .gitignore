@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+threats.db
+
+# Secrets & Config
+.env
+*.key
+*.pem
+*.crt
+config.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Flask
+instance/
+.webassets-cache
+
+# API Keys (CRITICAL - GitHub blocks these)
+*secret*
+*key*
+*password*
+*token*
+*.env
