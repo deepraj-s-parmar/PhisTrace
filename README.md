@@ -1,302 +1,408 @@
-# 🛡️ ThreatLens - Enterprise URL & Email Intelligence Platform
+<div align="center">
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.9+-green.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/flask-2.0+-red.svg)](https://flask.palletsprojects.com/)
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+<br/>
 
-> **Advanced Security Analysis Tool for Detecting Phishing, Malware, and Social Engineering Threats**
+```
+████████╗██╗  ██╗██████╗ ███████╗ █████╗ ████████╗██╗     ███████╗███╗   ██╗███████╗
+╚══██╔══╝██║  ██║██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██║     ██╔════╝████╗  ██║██╔════╝
+   ██║   ███████║██████╔╝█████╗  ███████║   ██║   ██║     █████╗  ██╔██╗ ██║███████╗
+   ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══██║   ██║   ██║     ██╔══╝  ██║╚██╗██║╚════██║
+   ██║   ██║  ██║██║  ██║███████╗██║  ██║   ██║   ███████╗███████╗██║ ╚████║███████║
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝
+```
 
-ThreatLens is a professional-grade cybersecurity platform that analyzes URLs and emails for malicious content using 73+ security engines, advanced pattern recognition, and real-time threat intelligence.
+**Enterprise URL & Email Intelligence Platform**
 
-## 📸 Dashboard Preview
+*73+ security engines · Phishing detection · Email forensics · Live threat intelligence*
 
-![ThreatLens Dashboard](https://via.placeholder.com/1200x600?text=ThreatLens+Dashboard+Screenshot)
+<br/>
 
-## ✨ Features
+[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.0%2B-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Active-10b981?style=for-the-badge)]()
 
-### 🔗 URL Analysis
-- **73+ Security Engines** - Multi-engine malware detection
-- **Domain Reputation Check** - Age, WHOIS, DNS records
-- **SSL Certificate Validation** - HTTPS security verification
-- **Lookalike Domain Detection** - Typosquatting and homoglyph attacks
-- **URL Shortener Expansion** - Reveal hidden destinations
-- **Open Redirect Detection** - Identify malicious redirect chains
-- **IP-Based URL Detection** - Identify direct IP address links
+<br/>
 
-### 📧 Email Forensics
-- **Header Analysis** - From, Reply-To, Return-Path validation
-- **SPF/DKIM/DMARC Authentication** - Email origin verification
-- **Phishing Pattern Detection** - Urgency, threats, reward language
-- **Social Engineering Detection** - Authority impersonation, reciprocity
-- **Embedded URL Scanning** - Deep inspection of all links
-- **Attachment Analysis** - Dangerous file extension detection
-- **Lookalike Domain Detection** - Brand impersonation identification
+> A **professional-grade cybersecurity intelligence platform** — analyze URLs and emails for phishing, malware, and social engineering threats using 73+ security engines, 500+ detection signatures, and real-time IOC feeds, with a live dashboard, batch scanning, and geographic threat attribution.
 
-### 📊 Batch Scanner
-- **100 URLs Simultaneously** - High-volume scanning
-- **Progress Tracking** - Real-time scan status
-- **CSV Export** - Download results in spreadsheet format
-- **Batch Summary** - Risk distribution statistics
+<br/>
 
-### 📈 Interactive Dashboard
-- **Real-time Metrics** - Total scans, threats detected, average risk
-- **Hourly Scan Volume Charts** - Track activity patterns
-- **Threat Distribution Donut** - Visual breakdown by category
-- **Detection Heatmap** - Hourly × Day of week activity
-- **Risk Score Trends** - 7-day average tracking
-- **Engine Coverage Gauge** - Real-time engine status
+---
 
-### 🔍 Threat Intelligence
-- **Live IOC Feed** - Real-time indicators of compromise
-- **Active Campaign Tracking** - PayPal phish, Emotet, Crypto scams
-- **IOC Volume Charts** - 7-day intelligence trends
-- **Source Attribution** - OpenPhish, VirusTotal, URLhaus
+</div>
 
-### 🌍 Geographic Analysis
-- **Threat Origin Mapping** - Country-based distribution
-- **Regional Attack Vectors** - Radar chart visualization
-- **Hosting Provider Risk Matrix** - Abuse rate tracking
-- **Provider Blocking** - One-click provider blocking
+<br/>
 
-### 👤 User Management
-- **Secure Authentication** - Sign in / Sign up system
-- **Session Management** - Persistent login with remember me
-- **User Dashboard** - Personalized experience
-- **Logout Functionality** - Secure session termination
+## ◈ Table of Contents
 
-### 🎨 Professional UI
-- **Light/Dark Theme** - Toggle between color schemes
-- **Responsive Design** - Desktop, tablet, and mobile support
-- **Interactive Charts** - Real-time data visualization
-- **Toast Notifications** - Non-intrusive alerts
-- **Loading Animations** - Smooth scan progress indicators
+- [Overview](#-overview)
+- [Detection Capabilities](#-detection-capabilities)
+- [Risk Scoring](#-risk-scoring)
+- [Architecture](#-architecture)
+- [Dashboard Modules](#-dashboard-modules)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [API Reference](#-api-reference)
+- [Performance](#-performance)
+- [Security Model](#-security-model)
+- [Docker Deployment](#-docker-deployment)
+- [Troubleshooting](#-troubleshooting)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-## 🏗️ Architecture
-┌─────────────────────────────────────────────────────────────┐
-│ Frontend (HTML/CSS/JS) │
-│ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────────────┐ │
-│ │Dashboard│ │ URL │ │ Email │ │ Batch │ │
-│ │ │ │Analyzer │ │Analyzer │ │ Scanner │ │
-│ └─────────┘ └─────────┘ └─────────┘ └─────────────────┘ │
-│ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────────────┐ │
-│ │ History │ │ Threat │ │ Geo │ │ Settings │ │
-│ │ │ │ Intel │ │Analysis │ │ │ │
-│ └─────────┘ └─────────┘ └─────────┘ └─────────────────┘ │
-└─────────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────────┐
-│ Backend (Flask/Python) │
-│ │
-│ ┌──────────────────────────────────────────────────────┐ │
-│ │ API Routes (RESTful) │ │
-│ │ /api/scan/url │ /api/scan/email │ /api/history │ │
-│ └──────────────────────────────────────────────────────┘ │
-│ │ │
-│ ┌──────────────────────────────────────────────────────┐ │
-│ │ Threat Detection Engine │ │
-│ │ • URL Analyzer (73+ engines) │ │
-│ │ • Email Analyzer (headers, auth, language) │ │
-│ │ • Pattern Recognition (500+ signatures) │ │
-│ └──────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────────┐
-│ Database (SQLite) │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐ │
-│ │ scans │ │ findings │ │breakdown │ │ threat_intel │ │
-│ └──────────┘ └──────────┘ └──────────┘ └──────────────┘ │
-└─────────────────────────────────────────────────────────────┘
+<br/>
 
-text
+---
 
-## 📁 Project Structure
-threatlens/
-│
-├── 📁 templates/ # Frontend HTML files
-│ ├── index.html # Main dashboard
-│ ├── signin.html # Sign in page
-│ └── signup.html # Sign up page
-│
-├── 📁 static/ # Static assets
-│ ├── style.css # Professional styling
-│ └── app.js # Frontend logic
-│
-├── 📄 app.py # Flask backend (API routes)
-├── 📄 analyzer.py # Threat detection engine
-├── 📄 requirements.txt # Python dependencies
-├── 📄 .gitignore # Git ignore rules
-└── 📄 README.md # Documentation
+## ◈ Overview
 
-text
+ThreatLens is a **self-hosted URL and email threat intelligence platform** that consolidates multi-engine scanning, header forensics, pattern recognition, and live IOC feeds into a single analyst interface. It is designed for security teams that need fast, actionable verdicts on suspicious links and email content without sending data to external SaaS platforms.
 
-## 🚀 Installation
+```
+        Suspicious URL or Email Content
+                     │
+                     ▼
+        ┌───────────────────────────────────────────────────────┐
+        │             THREATLENS DETECTION ENGINE               │
+        │                                                       │
+        │  ┌─────────────────┐      ┌─────────────────────────┐ │
+        │  │   URL Analyzer  │      │    Email Forensics      │ │
+        │  │                 │      │                         │ │
+        │  │ 73+ engines     │      │ Header validation       │ │
+        │  │ Domain WHOIS    │      │ SPF/DKIM/DMARC          │ │
+        │  │ SSL validation  │      │ Phishing language       │ │
+        │  │ Typosquatting   │      │ Social engineering      │ │
+        │  │ Redirect chains │      │ Embedded URL scan       │ │
+        │  └────────┬────────┘      └───────────┬─────────────┘ │
+        │           └──────────┬────────────────┘               │
+        │                      ▼                                │
+        │         ┌────────────────────────┐                    │
+        │         │   Pattern Recognition  │                    │
+        │         │   500+ signatures      │                    │
+        │         └────────────┬───────────┘                    │
+        │                      ▼                                │
+        │         ┌────────────────────────┐                    │
+        │         │   Risk Scoring Engine  │                    │
+        │         │   0 – 100              │                    │
+        │         └────────────┬───────────┘                    │
+        └──────────────────────┼────────────────────────────────┘
+                               │
+                  ┌────────────┴────────────┐
+                  ▼                         ▼
+           Verdict + Report           SQLite Storage
+           (dashboard / API)          (history / intel)
+```
+
+<br/>
+
+---
+
+## ◈ Detection Capabilities
+
+### URL Analysis — 30+ Methods
+
+| # | Method | What It Catches |
+|---|--------|-----------------|
+| 1 | **73+ Security Engines** | Multi-engine malware and phishing consensus |
+| 2 | **Domain Age Analysis** | Domains < 30 days flagged as suspicious |
+| 3 | **Suspicious TLD Detection** | `.tk .xyz .top .ml .ga` and 20+ high-abuse TLDs |
+| 4 | **Typosquatting Detection** | Levenshtein distance against known brand domains |
+| 5 | **Homoglyph Attack Detection** | Unicode character substitution (e.g., `pаypal.com`) |
+| 6 | **SSL Certificate Validation** | Expired, self-signed, or mismatched certificates |
+| 7 | **Open Redirect Detection** | Malicious redirect chain identification |
+| 8 | **URL Shortener Expansion** | Reveals true destination behind bit.ly, tinyurl, etc. |
+| 9 | **IP-Based URL Detection** | Direct IP address links bypassing DNS |
+| 10 | **WHOIS / DNS Record Analysis** | Registrar, nameserver, and record anomalies |
+
+### Email Forensics — 25+ Methods
+
+| # | Method | What It Catches |
+|---|--------|-----------------|
+| 1 | **SPF / DKIM / DMARC Validation** | Email origin authentication failures |
+| 2 | **Header Spoofing Detection** | From ≠ Return-Path ≠ Reply-To mismatches |
+| 3 | **Lookalike Domain Identification** | Brand impersonation in sender domains |
+| 4 | **Urgency Language Detection** | "Act now", "account suspended", time-pressure triggers |
+| 5 | **Threat / Intimidation Detection** | Legal threats, account deletion warnings |
+| 6 | **Reward / Lottery Scam Detection** | Prize claims, inheritance offers |
+| 7 | **Credential Harvesting Detection** | Login link patterns, fake portal redirects |
+| 8 | **Social Engineering Detection** | Authority impersonation, reciprocity triggers |
+| 9 | **Embedded URL Scanning** | Deep inspection of all links in email body |
+| 10 | **Attachment Risk Assessment** | `.exe .ps1 .bat .vbs .iso .dmg` and 15+ dangerous extensions |
+
+<br/>
+
+---
+
+## ◈ Risk Scoring
+
+Each scan produces a 0–100 risk score computed from weighted indicator aggregation.
+
+| Score Range | Level | Indicator | Recommended Action |
+|:-----------:|-------|:---------:|--------------------|
+| 0 – 20 | **Safe** | 🟢 | Low risk — proceed normally |
+| 21 – 50 | **Suspicious** | 🟡 | Exercise caution — verify sender/domain |
+| 51 – 80 | **High Risk** | 🟠 | Do not proceed — escalate for review |
+| 81 – 100 | **Critical Threat** | 🔴 | Block immediately — report to SOC |
+
+**Score drivers:** domain age, engine consensus, SSL validity, header anomalies, language pattern matches, redirect depth, TLD risk weight, and SPF/DKIM/DMARC failures.
+
+<br/>
+
+---
+
+## ◈ Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                    FRONTEND  (HTML · CSS · JS)                   │
+│                                                                  │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────────────┐    │
+│  │Dashboard │  │  URL     │  │  Email   │  │ Batch Scanner  │    │
+│  │          │  │ Analyzer │  │ Analyzer │  │ (100 URLs)     │    │
+│  └──────────┘  └──────────┘  └──────────┘  └────────────────┘    │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────────────┐    │
+│  │ History  │  │ Threat   │  │   Geo    │  │  Settings      │    │
+│  │          │  │  Intel   │  │ Analysis │  │                │    │
+│  └──────────┘  └──────────┘  └──────────┘  └────────────────┘    │
+└───────────────────────────────┬──────────────────────────────────┘
+                                │  REST API
+                                ▼
+┌──────────────────────────────────────────────────────────────────┐
+│                  BACKEND  (Flask · Python)                       │
+│                                                                  │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │  API Routes                                                 │ │
+│  │  /api/scan/url  ·  /api/scan/email  ·  /api/scan/batch      │ │
+│  │  /api/history   ·  /api/stats       ·  /api/threat-intel    │ │
+│  └────────────────────────┬────────────────────────────────────┘ │
+│                           │                                      │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │  Threat Detection Engine  (analyzer.py)                     │ │
+│  │                                                             │ │
+│  │  URL Analyzer      73+ engines · WHOIS · DNS · SSL          │ │
+│  │  Email Analyzer    Headers · Auth · Language · Embeds       │ │
+│  │  Pattern Engine    500+ signatures · Risk weighting         │ │
+│  └────────────────────────┬────────────────────────────────────┘ │
+└───────────────────────────┼──────────────────────────────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────────┐
+│                  DATABASE  (SQLite)                              │
+│                                                                  │
+│   scans  ·  findings  ·  breakdown  ·  threat_intel              │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+---
+
+## ◈ Dashboard Modules
+
+| Module | Description |
+|--------|-------------|
+| **Dashboard** | Real-time metrics — total scans, threats detected, average risk, hourly volume charts, threat distribution donut, detection heatmap, 7-day risk trend, engine coverage gauge |
+| **URL Analyzer** | Single URL deep scan with full indicator breakdown and per-engine verdict |
+| **Email Analyzer** | Paste email content or raw headers for header forensics, auth validation, and language analysis |
+| **Batch Scanner** | Scan up to 100 URLs simultaneously with progress tracking and CSV export |
+| **Scan History** | Full searchable log of all scans with risk scores and finding summaries |
+| **Threat Intelligence** | Live IOC feed — PayPal phish, Emotet, crypto scams; 7-day volume charts; source attribution (OpenPhish · VirusTotal · URLhaus) |
+| **Geographic Analysis** | Threat origin world map, regional attack vector radar chart, hosting provider risk matrix with one-click blocking |
+| **Settings** | API key management, theme toggle, notification preferences |
+
+<br/>
+
+---
+
+## ◈ Quick Start
+
+```bash
+# 1. Clone
+git clone https://github.com/parrysecurity/threatlens.git
+cd threatlens
+
+# 2. Virtual environment
+python3 -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run
+python3 app.py
+```
+
+Open `http://localhost:5000`
+
+| Demo Credential | Value |
+|-----------------|-------|
+| Email | `admin@threatscope.com` |
+| Password | `admin123` |
+
+> ⚠️ Change demo credentials before any internet-facing deployment.
+
+<br/>
+
+---
+
+## ◈ Installation
 
 ### Prerequisites
 
-- **Python 3.9+**
-- **pip** (Python package manager)
-- **Git** (optional, for cloning)
+```
+Python  3.9+
+pip
+Git
+```
 
-### Step 1: Clone the Repository
+### Step-by-step
 
 ```bash
+# Clone
 git clone https://github.com/parrysecurity/threatlens.git
 cd threatlens
-Step 2: Create Virtual Environment
-bash
-# Linux/Mac
+
+# Virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-# Windows
-python -m venv venv
-venv\Scripts\activate
-Step 3: Install Dependencies
-bash
+# Dependencies
 pip install -r requirements.txt
-Step 4: Run the Application
-bash
+
+# Start
 python3 app.py
-Step 5: Access the Dashboard
-Open your browser and navigate to:
+# → Running on http://localhost:5000
+```
 
-text
-http://localhost:5000
-Demo Credentials:
+### Dependencies
 
-Email: admin@threatscope.com
+| Package | Version | Purpose |
+|---------|:-------:|---------|
+| `Flask` | 2.0+ | Web framework + REST API |
+| `flask-cors` | 4.0+ | CORS header management |
+| `flask-limiter` | 3.0+ | Rate limiting (50 req/hour) |
+| `requests` | 2.28+ | External HTTP scanning |
+| `beautifulsoup4` | 4.11+ | HTML parsing for embedded URL extraction |
+| `python-whois` | 0.8+ | Domain WHOIS lookup |
+| `tldextract` | 3.4+ | Reliable domain/TLD parsing |
+| `dnspython` | 2.3+ | SPF/DKIM/DMARC DNS resolution |
+| `chart.js` | 4.4+ | Frontend charts (CDN) |
+| `fontawesome` | 6.5+ | UI icons (CDN) |
 
-Password: admin123
+<br/>
 
-📦 Dependencies
-Package	Version	Purpose
-Flask	2.0+	Web framework
-flask-cors	4.0+	CORS handling
-flask-limiter	3.0+	Rate limiting
-requests	2.28+	HTTP requests
-beautifulsoup4	4.11+	HTML parsing
-python-whois	0.8+	Domain WHOIS lookup
-tldextract	3.4+	Domain extraction
-dnspython	2.3+	DNS resolution
-chart.js	4.4+	Charts (CDN)
-fontawesome	6.5+	Icons (CDN)
-🔧 Configuration
-Database
-The application uses SQLite by default. Database file threats.db is created automatically on first run.
+---
 
-Environment Variables (Optional)
-bash
+## ◈ Configuration
+
+### Environment variables
+
+```bash
 export DATABASE_PATH=/custom/path/threats.db
 export FLASK_ENV=production
-export SECRET_KEY=your-secret-key
-API Keys (Optional for Enhanced Detection)
-Create a .env file:
+export SECRET_KEY=your-secret-key-here
+```
 
-env
+### API keys *(optional — enhance detection coverage)*
+
+Create `.env` in the repo root:
+
+```bash
+# Threat intelligence integrations
 VIRUSTOTAL_API_KEY=your_key_here
 URLSCAN_API_KEY=your_key_here
 PHISHTANK_API_KEY=your_key_here
 GOOGLE_SAFE_BROWSING_KEY=your_key_here
-🎯 Detection Capabilities
-URL Detection (30+ Methods)
-Domain age analysis (<30 days = suspicious)
+```
 
-Suspicious TLD detection (.tk, .xyz, .top, etc.)
+> Without API keys, ThreatLens runs in **standalone mode** using built-in pattern recognition and DNS/WHOIS analysis. API keys expand engine coverage to the full 73+ count.
 
-Typosquatting detection (Levenshtein distance)
+<br/>
 
-Homoglyph attack detection (Unicode substitution)
+---
 
-SSL certificate validation
+## ◈ API Reference
 
-Open redirect identification
+Full endpoint documentation available at `http://localhost:5000/api-docs`.
 
-URL shortener expansion
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/scan/url` | Analyze a single URL |
+| `POST` | `/api/scan/email` | Analyze email content or raw headers |
+| `POST` | `/api/scan/batch` | Batch scan up to 100 URLs |
+| `GET` | `/api/history` | Retrieve scan history |
+| `GET` | `/api/scan/<id>` | Get full details for a specific scan |
+| `GET` | `/api/stats` | Dashboard aggregate statistics |
+| `GET` | `/api/export/csv` | Export scan history as CSV |
+| `GET` | `/api/threat-intel` | Live IOC feed and campaign data |
+| `GET` | `/api/health` | Platform health check |
 
-IP-based URL detection
+### Example requests
 
-Multiple redirect detection
-
-Suspicious keyword detection
-
-Email Detection (25+ Methods)
-SPF/DKIM/DMARC validation
-
-Header spoofing detection
-
-Reply-To mismatch detection
-
-Lookalike domain identification
-
-Urgency language detection
-
-Threat/intimidation detection
-
-Reward/lottery scam detection
-
-Credential harvesting detection
-
-Generic greeting detection
-
-Attachment risk assessment
-
-Risk Scoring Algorithm
-Score Range	Risk Level	Action
-0-20	Safe	Low risk
-21-50	Suspicious	Exercise caution
-51-80	High Risk	Do not proceed
-81-100	Critical Threat	Block immediately
-🔐 Security Features
-Input Sanitization - XSS prevention
-
-SQL Injection Protection - Parameterized queries
-
-Rate Limiting - API throttling (50/hour)
-
-Session Management - Secure authentication
-
-Database Encryption - AES-256 ready
-
-HTTPS Support - SSL/TLS compatible
-
-CSRF Protection - Token-based validation
-
-📊 API Endpoints
-Method	Endpoint	Description
-POST	/api/scan/url	Analyze a URL
-POST	/api/scan/email	Analyze email content
-POST	/api/scan/batch	Batch URL scanning
-GET	/api/history	Get scan history
-GET	/api/scan/<id>	Get scan details
-GET	/api/stats	Dashboard statistics
-GET	/api/export/csv	Export history to CSV
-GET	/api/threat-intel	Get threat intelligence
-GET	/api/health	Health check
-API Usage Examples
-URL Scan:
-
-bash
+```bash
+# Scan a URL
 curl -X POST http://localhost:5000/api/scan/url \
   -H "Content-Type: application/json" \
-  -d '{"url":"https://example.com"}'
-Email Scan:
+  -d '{"url": "https://suspicious-domain.xyz/login"}'
 
-bash
+# Scan email content
 curl -X POST http://localhost:5000/api/scan/email \
   -H "Content-Type: application/json" \
-  -d '{"content":"Email content here"}'
-Batch Scan:
+  -d '{"content": "From: support@paypa1.com\nSubject: Urgent: Verify your account"}'
 
-bash
+# Batch scan
 curl -X POST http://localhost:5000/api/scan/batch \
   -H "Content-Type: application/json" \
-  -d '{"urls":["https://url1.com","https://url2.com"]}'
-🐳 Docker Deployment
-Dockerfile
-dockerfile
+  -d '{"urls": ["https://url1.com", "https://url2.net", "https://url3.tk"]}'
+
+# Export history
+curl http://localhost:5000/api/export/csv > scan_history.csv
+```
+
+<br/>
+
+---
+
+## ◈ Performance
+
+| Operation | Average Time |
+|-----------|:-----------:|
+| URL scan (single) | 1.4 s |
+| Email scan | 2.1 s |
+| Batch scan (20 URLs) | 28 s |
+| History load | 0.3 s |
+| Dashboard load | 0.8 s |
+
+<br/>
+
+---
+
+## ◈ Security Model
+
+| Control | Implementation |
+|---------|---------------|
+| **Input sanitization** | XSS prevention on all user-supplied fields |
+| **SQL injection prevention** | Parameterized queries throughout the database layer |
+| **Rate limiting** | 50 requests/hour per IP via `flask-limiter` |
+| **Session management** | Secure cookie-based auth with remember-me support |
+| **CSRF protection** | Token-based validation on all state-changing endpoints |
+| **HTTPS compatibility** | SSL/TLS termination at reverse proxy (Nginx recommended) |
+| **Secrets management** | All API keys loaded from `.env` — never hardcoded |
+
+<br/>
+
+---
+
+## ◈ Docker Deployment
+
+### Dockerfile
+
+```dockerfile
 FROM python:3.9-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -304,9 +410,13 @@ RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 5000
 CMD ["python", "app.py"]
-Docker Compose
-yaml
+```
+
+### Docker Compose
+
+```yaml
 version: '3.8'
+
 services:
   threatlens:
     build: .
@@ -316,117 +426,97 @@ services:
       - ./threats.db:/app/threats.db
     environment:
       - FLASK_ENV=production
-Run with Docker
-bash
+      - SECRET_KEY=change-this-in-production
+```
+
+```bash
+# Build and run
 docker build -t threatlens .
 docker run -p 5000:5000 threatlens
-🔧 Troubleshooting
-Common Issues
-Issue 1: ModuleNotFoundError: No module named 'flask'
 
-bash
-# Activate virtual environment
-source venv/bin/activate
-# Install dependencies
-pip install -r requirements.txt
-Issue 2: Port 5000 already in use
+# Or with Compose
+docker-compose up -d
+```
 
-bash
-# Kill process on port 5000
-sudo fuser -k 5000/tcp
-# Or use different port
-python3 app.py --port 5001
-Issue 3: Database disk image is malformed
+<br/>
 
-bash
-# Delete and recreate database
-rm threats.db
-python3 app.py  # Auto-creates new DB
-Issue 4: Permission denied for .db file
+---
 
-bash
-chmod 666 threats.db
-📈 Performance Benchmarks
-Operation	Average Time
-URL Scan	1.4 seconds
-Email Scan	2.1 seconds
-Batch (20 URLs)	28 seconds
-History Load	0.3 seconds
-Dashboard Load	0.8 seconds
-🤝 Contributing
-Fork the repository
+## ◈ Troubleshooting
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+| Symptom | Cause | Resolution |
+|---------|-------|------------|
+| `ModuleNotFoundError: flask` | Virtual env not active | `source venv/bin/activate && pip install -r requirements.txt` |
+| `Address already in use :5000` | Port occupied | `sudo fuser -k 5000/tcp` or `python3 app.py --port 5001` |
+| `Database disk image is malformed` | Corrupt SQLite file | `rm threats.db` — app auto-recreates on next start |
+| `Permission denied: threats.db` | Wrong file permissions | `chmod 666 threats.db` |
+| Blank dashboard on load | JS console error | Open DevTools → Console tab and check for missing CDN resources |
+| Low detection coverage | No API keys set | Add keys to `.env` — see [Configuration](#-configuration) |
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+<br/>
 
-Push to the branch (git push origin feature/AmazingFeature)
+---
 
-Open a Pull Request
+## ◈ Project Structure
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+```
+threatlens/
+│
+├── templates/
+│   ├── index.html          ← Main dashboard SPA
+│   ├── signin.html         ← Authentication page
+│   └── signup.html         ← Registration page
+│
+├── static/
+│   ├── style.css           ← UI styles (light/dark theme)
+│   └── app.js              ← Frontend logic + Chart.js bindings
+│
+├── app.py                  ← Flask app: routes, auth, session management
+├── analyzer.py             ← Threat detection engine (URL + email)
+├── requirements.txt        ← Python dependencies
+├── .env                    ← API keys (not committed)
+├── .gitignore
+└── README.md
+```
 
-👨‍💻 Author
-ParrySecurity
+<br/>
 
-GitHub: @parrysecurity
+---
 
-Project: ThreatLens
+## ◈ Contributing
 
-🙏 Acknowledgments
-VirusTotal for threat intelligence
+```bash
+# 1. Fork → clone → branch
+git checkout -b feature/dnp3-parser
 
-URLScan.io for website analysis
-
-OpenPhish for phishing feed
-
-Chart.js for data visualization
-
-FontAwesome for icons
-
-⭐ Star History
-If you find this project useful, please give it a star ⭐ on GitHub!
-
-🚀 Quick Commands Reference
-bash
-# Clone repository
-git clone https://github.com/parrysecurity/threatlens.git
-
-# Setup virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run application
+# 2. Make changes; verify app starts cleanly
 python3 app.py
 
-# Access dashboard
-http://localhost:5000
-Made with 🛡️ by ParrySecurity | Protecting the digital world one scan at a time
+# 3. Commit with a clear message
+git commit -m "feat: add VirusTotal v3 API integration"
 
-text
+# 4. Push and open a Pull Request
+git push origin feature/dnp3-parser
+```
 
-This complete README includes:
+<br/>
 
-✅ **Project Overview** - What ThreatLens does  
-✅ **Features List** - All 50+ detection features  
-✅ **Architecture Diagram** - Frontend → Backend → Database  
-✅ **File Structure** - Complete project layout  
-✅ **Installation Guide** - Step-by-step setup  
-✅ **Dependencies** - All required packages  
-✅ **Configuration** - Environment variables  
-✅ **Detection Capabilities** - 55+ detection methods  
-✅ **Risk Scoring** - Score ranges and meanings  
-✅ **Security Features** - Protection mechanisms  
-✅ **API Documentation** - All endpoints with examples  
-✅ **Docker Deployment** - Container setup  
-✅ **Troubleshooting** - Common issues and fixes  
-✅ **Performance Benchmarks** - Speed metrics  
-✅ **Contributing Guide** - How to contribute  
-✅ **License & Author** - Project information  
-✅ **Quick Commands** - One-line references  
+---
 
-Save this as `README.md` in your `/var/www/threatlens/` directory before pushing to GitHub!
+## ◈ License
+
+Distributed under the **MIT License** — see [`LICENSE`](LICENSE) for full terms.
+
+<br/>
+
+---
+
+<div align="center">
+
+Built with `Flask` · `Python` · `SQLite` · `Chart.js` · `VirusTotal` · `OpenPhish`
+
+<br/>
+
+*Protecting the digital world — one scan at a time. Leave a ⭐ if ThreatLens helped secure your team.*
+
+</div>
