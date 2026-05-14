@@ -64,9 +64,9 @@
 ThreatLens is a **self-hosted URL and email threat intelligence platform** that consolidates multi-engine scanning, header forensics, pattern recognition, and live IOC feeds into a single analyst interface. It is designed for security teams that need fast, actionable verdicts on suspicious links and email content without sending data to external SaaS platforms.
 
 ```
-        Suspicious URL or Email Content
-                     │
-                     ▼
+                    Suspicious URL or Email Content
+                                   │
+                                   ▼
         ┌───────────────────────────────────────────────────────┐
         │             THREATLENS DETECTION ENGINE               │
         │                                                       │
