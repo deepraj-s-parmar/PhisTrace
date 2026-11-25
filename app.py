@@ -159,11 +159,6 @@ def extract_domain(content):
 def index():
     return render_template("index.html")
 
-@app.route("/signin")
-@app.route("/signin.html")
-def signin():
-    return render_template("signin.html")
-
 # ============================================================================
 # SCAN ENDPOINTS
 # ============================================================================
