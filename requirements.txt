@@ -4,3 +4,4 @@ flask-limiter==3.7.0
 requests
 gunicorn
 tldextract
+python-whois
