@@ -984,9 +984,6 @@ Failure to comply will result in permanent suspension within 24 hours."></textar
 // ============================================
 // SESSION CHECK - Redirect if not logged in
 // ============================================
-if (!localStorage.getItem('threatscope_user')) {
-  window.location.href = 'signin.html';
-}
 
 // Display logged in user name in avatar
 const userName = localStorage.getItem('threatscope_name');
