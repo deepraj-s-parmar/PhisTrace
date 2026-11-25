@@ -984,12 +984,7 @@ Failure to comply will result in permanent suspension within 24 hours."></textar
 // ============================================
 
 // Display logged in user name in avatar
-const userName = localStorage.getItem('threatscope_name');
-if (userName && document.getElementById('userInitials')) {
-  const initials = userName.split(' ').map(n => n[0]).join('').toUpperCase();
-  document.getElementById('userInitials').textContent = initials;
-  document.getElementById('userAvatar').title = userName;
-}
+
 // ============================================
 
 // ═══════════════════════════════════════
@@ -1024,12 +1019,7 @@ function navigate(pageId) {
   if (pageId === 'settings') renderEngineList();
 }
 window.addEventListener('load', () => {
-  // Update avatar with logged-in user name
-  const userName = localStorage.getItem('threatscope_name');
-  if (userName && document.getElementById('userInitials')) {
-    const initials = userName.split(' ').map(n => n[0]).join('').toUpperCase();
-    document.getElementById('userInitials').textContent = initials;
-    document.getElementById('userAvatar').title = userName;
+ 
   }
   
   document.querySelector('.nav-item[data-page="dashboard"]').click();
@@ -1058,14 +1048,7 @@ function showNotif(msg, type = 'info') {
 // ═══════════════════════════════════════
 //  SIGN OUT FUNCTION
 // ═══════════════════════════════════════
-function signOut() {
-  localStorage.removeItem('threatscope_user');
-  localStorage.removeItem('threatscope_name');
-  showNotif('Signed out successfully', 'success');
-  setTimeout(() => {
-    window.location.href = 'signin.html';
-  }, 500);
-}
+
 // ═══════════════════════════════════════
 
 // ═══════════════════════════════════════
